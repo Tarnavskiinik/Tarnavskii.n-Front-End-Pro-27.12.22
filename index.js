@@ -1,2 +1,2 @@
 const question = prompt('What is your name?')
-alert("Hello, " + John+ "! How are you?")
+alert("Hello, " + question + "! How are you? ")
