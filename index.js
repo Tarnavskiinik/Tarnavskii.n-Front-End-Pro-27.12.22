@@ -14,9 +14,7 @@ else if(question ==='mult'){
 else if(question ==='div'){
     alert(x + "/" + y + "=" + (x/y))
 }
-else{
-    console.log();('Error');
-}
+
 
 
 
