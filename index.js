@@ -1,4 +1,4 @@
-/*for (let num=20; num <= 30; num=num+0.5) {
+for (let num=20; num <= 30; num=num+0.5) {
     console.log(num) 
   }
 
@@ -13,7 +13,7 @@ for(let i = 1; i < 100 ; i++){
         console.log(n)
     }
  
-}*/
+}
 
 let n = prompt('введите число от 1 до 10'); 
 nextPrime:
