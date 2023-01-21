@@ -11,17 +11,6 @@
 
    //
 
-// function max(myArray){
-//     let maxNumb = myArray[0];
-//     for(let num of myArray){
-//         if(maxNumb<num){
-//             maxNumb = num
-//         }
-//     }
-//     return maxNumb;
-// }
-// console.log(max(myArray))
-// console.log(myArray.indexOf(maxNumb))
 
 min = myArray[0];
 max = min;
@@ -33,23 +22,38 @@ console.log(max, myArray.indexOf(max));
 
 console.log(min , myArray.indexOf(min));
 
-//
-let neg = [];
-for (let i = 0; i < myArray.length; i++){
-    if(myArray[i] < 0){
-        neg.push(myArray[i])
+
+ let neg = [];
+ for (let i = 0; i < myArray.length; i++){
+     if(myArray[i] < 0){
+         neg.push(myArray[i])
+     }
+ }
+console.log(neg.length)
+// //  
+    
+const uniqSet = new Set();
+for (let i = 0; i < myArray.length; i++) {
+    for (let j = 0; j < i; j++)
+    if (myArray[j] === myArray[i]) {
+        uniqSet.add(myArray[i])
     }
 }
-console.log(neg.length)
-//
-function calc(myArray) {
-    let count = Object.create(null);
-  
-    for (let x of myArray) {
-      count[x] = ~count[x] + 1;
-    }
-  
-    return a.length - Object.keys(count).filter(x => count[x]>1).length;
-  }
-  console.log(count[x]);
+
+const uniq = Array.from(uniqSet)
+
+console.log(uniq.length)
+console.log(uniq)
+
+// const uniqSet = new Set();
+// for (let i = 0; i < myArray.length; i++) {
+//     for (let j = 0; j < i; j++)
+//     if (myArray[j] === myArray[i]) {
+//         uniqSet.add(myArray[i])
+//     }
+// }
+
+// const uniq = Array.from(uniqSet)
+
+// console.log(uniq)
 
