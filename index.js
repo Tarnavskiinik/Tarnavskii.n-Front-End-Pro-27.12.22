@@ -29,31 +29,74 @@ console.log(min , myArray.indexOf(min));
          neg.push(myArray[i])
      }
  }
-console.log(neg.length)
+console.log(neg.length , neg)
+
 // //  
-    
-const uniqSet = new Set();
-for (let i = 0; i < myArray.length; i++) {
-    for (let j = 0; j < i; j++)
-    if (myArray[j] === myArray[i]) {
-        uniqSet.add(myArray[i])
+
+
+const filter = myArray => myArray.filter(item => item % 2 !== 0)
+console.log(filter(sum));
+
+//
+
+
+// 
+var rep=[];
+for(i in sum){
+
+if (rep[sum[i]]!=undefined) {
+    (rep[sum[i]]++)
+}else {
+    (rep[sum[i]]=1)
+}
+}
+console.log(rep);
+//
+const countItems = {}; 
+for (const item of sum) {
+
+  countItems[item] = countItems[item] ? countItems[item] + 1 : 1;
+}
+const ress = Object.keys(countItems).filter((item) => countItems[item] > 1);
+console.dir(ress.length);
+//
+let num = 0;
+let num2 = 0;
+for (let i = 0; i < sum.length; i++){
+    if(sum[i] % 2 === 0){
+        num += sum[i];
+    }else{
+        num2 += sum[i];
     }
+    
+}
+console.log(num);
+console.log(num2);
+//
+
+ let res = sum.reduce((acc, rec) => acc * rec);
+ console.log(res);
+
+ //
+
+let lui = 1;
+for (let i = 0; i < sum.length; i++){
+    lui = lui * sum[i]
+}
+console.log(lui)
+
+//
+
+let mux = myArray[0];
+let maxi = 0;
+for (let i = 1; i < myArray.length; i++) {
+  if (myArray[i] > mux) {
+    mux = myArray[i];
+    myArray[maxi] = 0;
+    maxi = i;
+  } else {
+    myArray[i] = 0;
+  }
 }
 
-const uniq = Array.from(uniqSet)
-
-console.log(uniq.length)
-console.log(uniq)
-
-// const uniqSet = new Set();
-// for (let i = 0; i < myArray.length; i++) {
-//     for (let j = 0; j < i; j++)
-//     if (myArray[j] === myArray[i]) {
-//         uniqSet.add(myArray[i])
-//     }
-// }
-
-// const uniq = Array.from(uniqSet)
-
-// console.log(uniq)
-
+console.log(myArray);
