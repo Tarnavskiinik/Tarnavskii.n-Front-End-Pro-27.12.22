@@ -54,7 +54,7 @@ class Student {
     }
 }
 
-let student = new Student("Иван", "Иванов", 1998);
+let student = new Student("Василий", "Сохоневич", 1996);
 student.present(80).present(80).present(80)
 student.present(80)
 student.absent()
